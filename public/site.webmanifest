@@ -1,0 +1,87 @@
+{
+  "name": "DETTERY - Decentralized Lottery Platform",
+  "short_name": "DETTERY",
+  "description": "The world's first truly decentralized lottery platform. Experience provably fair gaming with transparent randomness, secure smart contracts, and automatic payouts on the Ethereum blockchain.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["finance", "games", "utilities"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "DETTERY Desktop View"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "DETTERY Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Create Lottery",
+      "short_name": "Create",
+      "description": "Create a new lottery pool",
+      "url": "/?action=create",
+      "icons": [
+        {
+          "src": "/shortcut-create.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Active Lotteries",
+      "short_name": "Lotteries",
+      "description": "View active lottery pools",
+      "url": "/?action=lotteries",
+      "icons": [
+        {
+          "src": "/shortcut-lotteries.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

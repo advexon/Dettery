@@ -7,6 +7,7 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { StructuredData } from '@/components/StructuredData';
 
 export default function Home() {
   const [refreshKey, setRefreshKey] = useState(0);
@@ -16,8 +17,10 @@ export default function Home() {
     setRefreshKey(prev => prev + 1);
   }, []);
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="mx-auto max-w-6xl p-8">
+    <>
+      <StructuredData type="website" />
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="mx-auto max-w-6xl p-8">
         <header className="mb-12 text-center">
           {/* Language Switcher */}
           <div className="flex justify-end mb-6">
@@ -35,9 +38,24 @@ export default function Home() {
               <p className="text-lg text-gray-500 font-medium">{t('header.subtitle')}</p>
             </div>
           </div>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            {t('header.description')}
-          </p>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                {t('header.description')}
+              </p>
+              
+              {/* SEO-optimized content */}
+              <div className="hidden">
+                <h2>Decentralized Lottery Platform</h2>
+                <p>DETTERY is the world's first truly decentralized lottery platform built on Ethereum blockchain. Experience provably fair gaming with transparent randomness, secure smart contracts, and automatic payouts. Join thousands of players in fair, transparent, and secure lottery games.</p>
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Provably Fair Gaming - Transparent randomness using blockchain technology</li>
+                  <li>Smart Contract Security - Automated and tamper-proof lottery execution</li>
+                  <li>Decentralized Platform - No central authority, fully transparent</li>
+                  <li>Automatic Payouts - Instant winner selection and prize distribution</li>
+                  <li>Multi-language Support - Available in English and Russian</li>
+                  <li>Social Sharing - Share lottery pools with friends and family</li>
+                </ul>
+              </div>
           <div className="flex justify-center">
             <ConnectWallet />
           </div>
@@ -140,7 +158,8 @@ export default function Home() {
             </Suspense>
           </ErrorBoundary>
         </section>
-      </div>
-    </main>
+        </div>
+      </main>
+    </>
   );
 }
