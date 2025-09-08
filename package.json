@@ -51,7 +51,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.8.4",
     "autoprefixer": "^10.4.16",
-    "next": "^14.2.32",
+    "next": "^15.5.2",
     "next-intl": "^4.3.6",
     "pino-pretty": "^13.1.1",
     "postcss": "^8.4.32",

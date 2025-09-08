@@ -1,7 +1,7 @@
 // src/lib/config.ts
 
 // Deployed LotteryFactory address on Sepolia testnet
-export const FACTORY_ADDRESS = process.env.NEXT_PUBLIC_FACTORY_ADDRESS || '0xDE22C7fF7Ac8C7645AfB673a4Ea7087705FE94Ce';
+export const FACTORY_ADDRESS = (process.env.NEXT_PUBLIC_FACTORY_ADDRESS || '0xDE22C7fF7Ac8C7645AfB673a4Ea7087705FE94Ce') as `0x${string}`;
 
 // LotteryFactory ABI from compiled contract (simplified - no VRF needed)
 export const FACTORY_ABI = [
