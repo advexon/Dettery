@@ -42,7 +42,7 @@
     "docs:dev": "echo 'Documentation is in the docs/ folder'",
     "docs:build": "echo 'Building documentation...' && echo 'Documentation ready!'",
     "clean": "rimraf .next out contracts/cache contracts/artifacts contracts/typechain-types",
-    "prepare": "npm run compile",
+    "prepare": "echo 'Skipping contract compilation for Vercel deployment'",
     "postinstall": "echo 'Dependencies installed successfully'",
     "analyze": "ANALYZE=true npm run build",
     "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
