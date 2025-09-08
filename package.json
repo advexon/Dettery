@@ -43,12 +43,16 @@
     "docs:build": "echo 'Building documentation...' && echo 'Documentation ready!'",
     "clean": "rimraf .next out contracts/cache contracts/artifacts contracts/typechain-types",
     "prepare": "npm run compile",
-    "postinstall": "echo 'Dependencies installed successfully'"
+    "postinstall": "echo 'Dependencies installed successfully'",
+    "analyze": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "bundle-analyzer": "npx @next/bundle-analyzer"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.8.4",
     "autoprefixer": "^10.4.16",
-    "next": "^15.5.2",
+    "next": "^14.2.32",
+    "next-intl": "^4.3.6",
     "pino-pretty": "^13.1.1",
     "postcss": "^8.4.32",
     "react": "18.2.0",
@@ -61,7 +65,7 @@
     "@types/node": "20.10.0",
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
-    "eslint": "8.55.0",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "ignore-loader": "^0.1.2",
     "rimraf": "^5.0.5",

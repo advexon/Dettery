@@ -1,0 +1,157 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "close": "Закрыть",
+    "retry": "Попробовать снова",
+    "reload": "Перезагрузить страницу"
+  },
+  "navigation": {
+    "home": "Главная",
+    "lotteries": "Лотереи",
+    "create": "Создать",
+    "connect": "Подключить кошелек"
+  },
+  "header": {
+    "title": "ДЕТТЕРИ",
+    "subtitle": "Децентрализованная платформа лотерей",
+    "description": "Испытайте честную игру с прозрачной случайностью, безопасными смарт-контрактами и автоматическими выплатами в тестовой сети Ethereum Sepolia.",
+    "networkStatus": "Подключено к тестовой сети Sepolia"
+  },
+  "wallet": {
+    "connect": "Подключить кошелек",
+    "disconnect": "Отключить",
+    "connecting": "Подключение...",
+    "connected": "Подключено",
+    "notConnected": "Не подключено",
+    "connectPrompt": "Подключите кошелек для участия",
+    "connectDescription": "Используйте MetaMask или любой Web3 кошелек"
+  },
+  "lottery": {
+    "create": "Создать лотерею",
+    "enter": "Участвовать в лотерее",
+    "pickWinner": "Выбрать победителя",
+    "participants": "Участники",
+    "winner": "Победитель",
+    "prizePool": "Призовой фонд",
+    "ticketPrice": "Цена билета",
+    "maxPlayers": "Максимум игроков",
+    "state": {
+      "open": "Открыта",
+      "calculating": "Выбор победителя",
+      "closed": "Закрыта",
+      "unknown": "Неизвестно"
+    },
+    "actions": {
+      "entering": "Участие...",
+      "confirming": "Подтверждение...",
+      "processing": "Обработка...",
+      "pickingWinner": "Выбор победителя...",
+      "youreIn": "Вы участвуете!",
+      "entries": "участий"
+    },
+    "messages": {
+      "noActiveLotteries": "Нет активных лотерей",
+      "noActiveLotteriesDescription": "Станьте первым, кто создаст лотерейный пул и начнет веселье! Создайте честную и прозрачную лотерею, в которую может присоединиться любой.",
+      "createFirstLottery": "Используйте форму выше, чтобы создать свою первую лотерею",
+      "lotteryClosed": "Лотерея закрыта",
+      "lotteryClosedDescription": "Эта лотерея завершена",
+      "waitingForRandomness": "Ожидание случайности",
+      "waitingForRandomnessDescription": "Победитель может быть выбран после блока",
+      "winnerSelected": "Победитель выбран!",
+      "congratulations": "Поздравляем! Вы выиграли!",
+      "latestFirst": "Последние лотереи показаны первыми"
+    },
+    "validation": {
+      "ticketPriceRequired": "Цена билета обязательна",
+      "ticketPricePositive": "Цена билета должна быть больше 0",
+      "maxPlayersRequired": "Максимум игроков обязателен",
+      "maxPlayersPositive": "Максимум игроков должен быть больше 0",
+      "maxPlayersLimit": "Максимум игроков не может превышать 1000"
+    },
+    "share": {
+      "share": "Поделиться",
+      "shareLottery": "Поделиться лотереей",
+      "title": "Присоединяйтесь к моей лотерее",
+      "description": "Я создал лотерейный пул на ДЕТТЕРИ",
+      "joinMessage": "Присоединяйтесь к лотерее и выигрывайте!",
+      "copy": "Копировать ссылку",
+      "copied": "Скопировано!",
+      "email": "Email",
+      "sharedLottery": "Поделенная лотерея",
+      "sharedLotteryDescription": "Эта лотерея была поделена с вами через прямую ссылку"
+    }
+  },
+  "createLottery": {
+    "title": "Создать новую лотерею",
+    "description": "Настройте новый лотерейный пул с пользовательскими параметрами",
+    "randomnessInfo": "Используется БЕСПЛАТНАЯ случайность на основе хеша блока - подписка VRF не нужна!",
+    "form": {
+      "ticketPriceLabel": "Цена билета (ETH)",
+      "ticketPricePlaceholder": "0.01",
+      "maxPlayersLabel": "Максимум игроков",
+      "maxPlayersPlaceholder": "10",
+      "submit": "Создать лотерею",
+      "submitting": "Создание...",
+      "confirming": "Подтверждение..."
+    },
+    "transactionHash": "Хеш транзакции:"
+  },
+  "transparency": {
+    "title": "Прозрачность и безопасность",
+    "features": {
+      "smartContractVerified": "Смарт-контракт проверен",
+      "blockHashRandomness": "Случайность на основе хеша блока",
+      "noCentralAuthority": "Нет центральной власти",
+      "automaticPayouts": "Автоматические выплаты"
+    }
+  },
+  "howItWorks": {
+    "title": "Как это работает",
+    "subtitle": "Прозрачная и честная система лотерей",
+    "steps": {
+      "step1": {
+        "title": "Создание лотерейного пула",
+        "description": "Установите цену билета и максимальное количество игроков. Разверните новый лотерейный контракт."
+      },
+      "step2": {
+        "title": "Участие игроков",
+        "description": "Пользователи платят цену билета для участия. Разрешено несколько участий от одного пользователя."
+      },
+      "step3": {
+        "title": "Выбор победителя",
+        "description": "Когда лотерея достигает максимального количества игроков, система ждет 2 блока для честной случайности."
+      },
+      "step4": {
+        "title": "Автоматические выплаты",
+        "description": "Победитель получает 80% от общего пула, администратор получает 20% комиссии."
+      }
+    },
+    "securityFeatures": {
+      "title": "Функции безопасности",
+      "features": {
+        "smartContractVerified": "Смарт-контракт проверен",
+        "noCentralAuthority": "Нет центральной власти",
+        "transparentRandomness": "Прозрачная случайность",
+        "automaticExecution": "Автоматическое выполнение"
+      }
+    }
+  },
+  "errors": {
+    "somethingWentWrong": "Что-то пошло не так",
+    "unexpectedError": "Произошла неожиданная ошибка",
+    "lotteryDataError": "Ошибка данных лотереи",
+    "unableToLoadLottery": "Не удалось загрузить информацию о лотерее",
+    "errorEnteringLottery": "Ошибка при участии в лотерее",
+    "errorPickingWinner": "Ошибка при выборе победителя",
+    "errorCreatingLottery": "Ошибка при создании лотереи"
+  },
+  "language": {
+    "switch": "Переключить язык",
+    "english": "English",
+    "russian": "Русский"
+  }
+}

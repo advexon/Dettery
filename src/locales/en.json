@@ -1,0 +1,157 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "retry": "Try Again",
+    "reload": "Reload Page"
+  },
+  "navigation": {
+    "home": "Home",
+    "lotteries": "Lotteries",
+    "create": "Create",
+    "connect": "Connect Wallet"
+  },
+  "header": {
+    "title": "DETTERY",
+    "subtitle": "Decentralized Lottery Platform",
+    "description": "Experience provably fair gaming with transparent randomness, secure smart contracts, and automatic payouts on the Ethereum Sepolia testnet.",
+    "networkStatus": "Connected to Sepolia Testnet"
+  },
+  "wallet": {
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "notConnected": "Not Connected",
+    "connectPrompt": "Connect your wallet to participate",
+    "connectDescription": "Use MetaMask or any Web3 wallet"
+  },
+  "lottery": {
+    "create": "Create Lottery Pool",
+    "enter": "Enter Lottery",
+    "pickWinner": "Pick Winner",
+    "participants": "Participants",
+    "winner": "Winner",
+    "prizePool": "Prize Pool",
+    "ticketPrice": "Ticket Price",
+    "maxPlayers": "Max Players",
+    "state": {
+      "open": "Open",
+      "calculating": "Calculating Winner",
+      "closed": "Closed",
+      "unknown": "Unknown"
+    },
+    "actions": {
+      "entering": "Entering...",
+      "confirming": "Confirming...",
+      "processing": "Processing...",
+      "pickingWinner": "Picking Winner...",
+      "youreIn": "You're In!",
+      "entries": "entries"
+    },
+    "messages": {
+      "noActiveLotteries": "No Active Lotteries",
+      "noActiveLotteriesDescription": "Be the first to create a lottery pool and start the fun! Create a fair and transparent lottery that anyone can join.",
+      "createFirstLottery": "Use the form above to create your first lottery",
+      "lotteryClosed": "Lottery Closed",
+      "lotteryClosedDescription": "This lottery has been completed",
+      "waitingForRandomness": "Waiting for Randomness",
+      "waitingForRandomnessDescription": "Winner can be picked after block",
+      "winnerSelected": "Winner Selected!",
+      "congratulations": "Congratulations! You won!",
+      "latestFirst": "Latest lotteries are shown first"
+    },
+    "validation": {
+      "ticketPriceRequired": "Ticket price is required",
+      "ticketPricePositive": "Ticket price must be greater than 0",
+      "maxPlayersRequired": "Max players is required",
+      "maxPlayersPositive": "Max players must be greater than 0",
+      "maxPlayersLimit": "Max players cannot exceed 1000"
+    },
+    "share": {
+      "share": "Share",
+      "shareLottery": "Share Lottery",
+      "title": "Join my lottery pool",
+      "description": "I created a lottery pool on DETTERY",
+      "joinMessage": "Join the lottery and win!",
+      "copy": "Copy Link",
+      "copied": "Copied!",
+      "email": "Email",
+      "sharedLottery": "Shared Lottery",
+      "sharedLotteryDescription": "This lottery was shared with you via a direct link"
+    }
+  },
+  "createLottery": {
+    "title": "Create New Lottery",
+    "description": "Set up a new lottery pool with custom parameters",
+    "randomnessInfo": "Using FREE block hash randomness - no VRF subscription needed!",
+    "form": {
+      "ticketPriceLabel": "Ticket Price (ETH)",
+      "ticketPricePlaceholder": "0.01",
+      "maxPlayersLabel": "Maximum Players",
+      "maxPlayersPlaceholder": "10",
+      "submit": "Create Lottery Pool",
+      "submitting": "Creating...",
+      "confirming": "Confirming..."
+    },
+    "transactionHash": "Transaction Hash:"
+  },
+  "transparency": {
+    "title": "Transparency & Safety",
+    "features": {
+      "smartContractVerified": "Smart Contract Verified",
+      "blockHashRandomness": "Block Hash Randomness",
+      "noCentralAuthority": "No Central Authority",
+      "automaticPayouts": "Automatic Payouts"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Transparent and fair lottery system",
+    "steps": {
+      "step1": {
+        "title": "Create Lottery Pool",
+        "description": "Set ticket price and maximum players. Deploy a new lottery contract."
+      },
+      "step2": {
+        "title": "Participants Join",
+        "description": "Users pay the ticket price to enter. Multiple entries allowed per user."
+      },
+      "step3": {
+        "title": "Winner Selection",
+        "description": "When lottery reaches maximum players, system waits 2 blocks for fair randomness."
+      },
+      "step4": {
+        "title": "Automatic Payouts",
+        "description": "Winner receives 80% of total pool, admin receives 20% fee."
+      }
+    },
+    "securityFeatures": {
+      "title": "Security Features",
+      "features": {
+        "smartContractVerified": "Smart Contract Verified",
+        "noCentralAuthority": "No Central Authority",
+        "transparentRandomness": "Transparent Randomness",
+        "automaticExecution": "Automatic Execution"
+      }
+    }
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedError": "An unexpected error occurred",
+    "lotteryDataError": "Lottery Data Error",
+    "unableToLoadLottery": "Unable to load lottery information",
+    "errorEnteringLottery": "Error entering lottery",
+    "errorPickingWinner": "Error picking winner",
+    "errorCreatingLottery": "Error creating lottery"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "english": "English",
+    "russian": "Русский"
+  }
+}
