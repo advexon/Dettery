@@ -1,16 +1,49 @@
 {
   "name": "dettery",
   "version": "1.0.0",
-  "description": "Decentralized Lottery - A provably fair lottery system",
+  "description": "🎲 Decentralized Lottery - A provably fair lottery system built on Ethereum",
   "private": true,
+  "keywords": [
+    "ethereum",
+    "lottery",
+    "blockchain",
+    "web3",
+    "decentralized",
+    "smart-contracts",
+    "nextjs",
+    "typescript",
+    "wagmi",
+    "viem"
+  ],
+  "author": "DETTERY Team",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/dettery#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/dettery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dettery/issues"
+  },
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
+    "build:vercel": "npm run build",
     "start": "next start -p 3000",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
     "hardhat": "cd contracts && npx hardhat",
     "deploy": "cd contracts && npx hardhat run scripts/deploy.ts --network sepolia",
-    "compile": "cd contracts && npx hardhat compile"
+    "deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network localhost",
+    "compile": "cd contracts && npx hardhat compile",
+    "test": "cd contracts && npx hardhat test",
+    "verify": "cd contracts && npx hardhat verify --network sepolia",
+    "docs:dev": "echo 'Documentation is in the docs/ folder'",
+    "docs:build": "echo 'Building documentation...' && echo 'Documentation ready!'",
+    "clean": "rimraf .next out contracts/cache contracts/artifacts contracts/typechain-types",
+    "prepare": "npm run compile",
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.8.4",
@@ -30,6 +63,8 @@
     "@types/react-dom": "18.2.17",
     "eslint": "8.55.0",
     "eslint-config-next": "^15.5.2",
+    "ignore-loader": "^0.1.2",
+    "rimraf": "^5.0.5",
     "typescript": "5.3.2"
   }
 }

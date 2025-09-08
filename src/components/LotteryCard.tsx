@@ -126,7 +126,8 @@ export function LotteryCard({ address, index, onDataChange }: LotteryCardProps) 
 
   const isUserInLottery = players?.includes(userAddress as `0x${string}`);
   const isLotteryOpen = lotteryState === 0;
-  const isLotteryFull = players && maxPlayers && players.length >= Number(maxPlayers);
+  const isLotteryFull = Boolean(players && maxPlayers && maxPlayers > BigInt(0) && players.length >= Number(maxPlayers.toString()));
+  const canPickWinnerNow = canPickWinner === true;
 
   // Show loading state during hydration
   if (!mounted) {
@@ -376,7 +377,7 @@ export function LotteryCard({ address, index, onDataChange }: LotteryCardProps) 
 
         {isLotteryFull && lotteryState === 1 && (
           <div>
-            {canPickWinner ? (
+            {canPickWinnerNow ? (
               <button
                 onClick={handlePickWinner}
                 disabled={isPending || isConfirming}

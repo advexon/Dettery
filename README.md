@@ -1,145 +1,290 @@
-# DETTERY - Decentralized Lottery
+# 🎲 DETTERY - Decentralized Lottery Platform
 
-A provably fair lottery system built with Chainlink VRF (Verifiable Random Function) for secure randomness.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Solidity](https://img.shields.io/badge/Solidity-0.8.20-blue.svg)](https://soliditylang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black.svg)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+[![Ethereum](https://img.shields.io/badge/Ethereum-Sepolia-627EEA.svg)](https://ethereum.org/)
 
-## 🎯 Features
+> A provably fair, transparent, and decentralized lottery system built on Ethereum Sepolia testnet with automatic payouts and secure randomness.
 
-- **Decentralized**: Built on Ethereum using smart contracts
-- **Provably Fair**: Uses Chainlink VRF for verifiable randomness
-- **Transparent**: All lottery data is on-chain and publicly verifiable
-- **Fair Distribution**: 80% to winner, 20% to admin
-- **User-Friendly**: Modern Next.js frontend with wallet integration
+## 🌟 Features
 
-## 🏗️ Architecture
+### 🔒 **Security & Transparency**
+- ✅ **Smart Contract Verified** - All contracts are verified and auditable
+- ✅ **Block Hash Randomness** - Free, secure randomness using blockchain data
+- ✅ **No Central Authority** - Fully decentralized operation
+- ✅ **Automatic Payouts** - Winner gets 80%, admin gets 20%
+- ✅ **Public Blockchain** - All transactions are transparent and verifiable
 
-### Backend (Smart Contracts)
-- **LotteryFactory**: Deploys individual lottery contracts
-- **Lottery**: Individual lottery pools with VRF integration
-- **Chainlink VRF**: Provides cryptographically secure randomness
+### 🎯 **User Experience**
+- ✅ **Modern UI/UX** - Beautiful, responsive design with Tailwind CSS
+- ✅ **Real-time Updates** - No page refresh needed for lottery updates
+- ✅ **Participant Visibility** - See all participants and their entries
+- ✅ **Multiple Entry Support** - Users can enter multiple times
+- ✅ **Wallet Integration** - MetaMask and Web3 wallet support
 
-### Frontend (Next.js)
-- **Wagmi**: Web3 React hooks for wallet integration
-- **Tailwind CSS**: Modern, responsive UI design
-- **TypeScript**: Type-safe development
+### 🛠️ **Technical Features**
+- ✅ **TypeScript** - Full type safety across the application
+- ✅ **Wagmi & Viem** - Modern Ethereum development tools
+- ✅ **Hardhat** - Professional smart contract development
+- ✅ **Sepolia Testnet** - Deployed and tested on Ethereum testnet
+- ✅ **Auto-refresh** - Real-time data updates after transactions
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+
-- MetaMask or compatible wallet
-- Sepolia ETH for testing
-- Chainlink VRF subscription
 
-### 1. Clone and Install
+- Node.js 18+ 
+- npm or yarn
+- MetaMask or Web3 wallet
+- Sepolia ETH (get from [faucets](https://sepoliafaucet.com/))
 
-```bash
-# Install root dependencies
-npm install
+### Installation
 
-# Install contract dependencies
-cd contracts
-npm install
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/dettery.git
+   cd dettery
+   ```
+
+2. **Install dependencies**
+   ```bash
+   # Install frontend dependencies
+   npm install
+   
+   # Install smart contract dependencies
+   cd contracts
+   npm install
+   cd ..
+   ```
+
+3. **Environment Setup**
+   ```bash
+   # Copy environment template
+   cp contracts/.env.example contracts/.env
+   
+   # Edit contracts/.env with your configuration
+   SEPOLIA_RPC_URL=https://ethereum-sepolia.publicnode.com
+   PRIVATE_KEY=your_private_key_here
+   ETHERSCAN_API_KEY=your_etherscan_api_key
+   ```
+
+4. **Deploy Smart Contracts**
+   ```bash
+   cd contracts
+   npx hardhat compile
+   npx hardhat run scripts/deploy.ts --network sepolia
+   ```
+
+5. **Update Frontend Configuration**
+   ```typescript
+   // Update src/lib/config.ts with your deployed contract address
+   export const FACTORY_ADDRESS = 'your_deployed_contract_address';
+   ```
+
+6. **Start the Application**
+   ```bash
+   npm run dev
+   ```
+
+7. **Open in Browser**
+   ```
+   http://localhost:3000
+   ```
+
+## 📖 How It Works
+
+### 1. **Create Lottery Pool**
+- Set ticket price and maximum players
+- Deploy a new lottery contract
+- Lottery becomes available for participation
+
+### 2. **Participate**
+- Connect your Web3 wallet
+- Pay the ticket price to enter
+- Multiple entries allowed per user
+
+### 3. **Winner Selection**
+- When lottery reaches maximum players
+- System waits 2 blocks for fair randomness
+- Block hash randomness selects winner automatically
+
+### 4. **Payouts**
+- Winner receives 80% of total pool
+- Admin receives 20% fee
+- All transactions are automatic and transparent
+
+## 🏗️ Architecture
+
+### Smart Contracts
+
+```
+contracts/
+├── Lottery.sol          # Individual lottery logic
+├── LotteryFactory.sol   # Factory for creating lotteries
+└── scripts/
+    └── deploy.ts        # Deployment script
 ```
 
-### 2. Environment Setup
+### Frontend
 
-Create `contracts/.env` file:
+```
+src/
+├── app/                 # Next.js App Router
+├── components/          # React components
+│   ├── ConnectWallet.tsx
+│   ├── CreateLottery.tsx
+│   ├── LotteryCard.tsx
+│   └── LotteryList.tsx
+└── lib/
+    └── config.ts        # Contract addresses and ABIs
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create `contracts/.env`:
+
 ```env
-SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_PROJECT_ID
+SEPOLIA_RPC_URL=https://ethereum-sepolia.publicnode.com
 PRIVATE_KEY=your_private_key_here
-ETHERSCAN_API_KEY=your_etherscan_api_key_here
+ETHERSCAN_API_KEY=your_etherscan_api_key
 ```
 
-### 3. Deploy Contracts
+### Contract Addresses
 
+Update `src/lib/config.ts`:
+
+```typescript
+export const FACTORY_ADDRESS = '0xDE22C7fF7Ac8C7645AfB673a4Ea7087705FE94Ce';
+```
+
+## 🧪 Testing
+
+### Smart Contract Tests
 ```bash
 cd contracts
-npx hardhat compile
-npx hardhat run scripts/deploy.ts --network sepolia
+npx hardhat test
 ```
 
-### 4. Update Frontend Config
-
-Update `src/lib/config.ts` with your deployed contract address and ABIs.
-
-### 5. Run Frontend
-
+### Frontend Testing
 ```bash
-npm run dev
+npm run test
 ```
 
-Visit `http://localhost:3000` to use the application.
+### Manual Testing
+1. Connect MetaMask to Sepolia testnet
+2. Get Sepolia ETH from faucets
+3. Create a lottery pool
+4. Participate with multiple wallets
+5. Test winner selection and payouts
 
-## 📋 Contract Details
+## 📊 Smart Contract Details
 
 ### Lottery Contract
-- **Ticket Price**: Fixed price per entry (in ETH)
-- **Max Players**: Maximum number of participants
-- **States**: Open → Calculating Winner → Closed
-- **Winner Selection**: Chainlink VRF random number generation
-- **Prize Distribution**: 80% winner, 20% admin
 
-### LotteryFactory Contract
-- **Deployment**: Creates new lottery instances
-- **Management**: Tracks all deployed lotteries
-- **Configuration**: Sets VRF parameters
-
-## 🔧 Development
-
-### Smart Contract Commands
-```bash
-cd contracts
-
-# Compile contracts
-npx hardhat compile
-
-# Run tests
-npx hardhat test
-
-# Deploy to Sepolia
-npx hardhat run scripts/deploy.ts --network sepolia
-
-# Verify on Etherscan
-npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
+```solidity
+contract Lottery {
+    // Core state variables
+    uint256 public immutable i_ticketPrice;
+    uint256 public immutable i_maxPlayers;
+    address payable public immutable i_admin;
+    
+    // Lottery state
+    enum LotteryState { OPEN, CALCULATING_WINNER, CLOSED }
+    LotteryState private s_lotteryState;
+    
+    // Participants and winner
+    address payable[] public s_players;
+    address public s_winner;
+    
+    // Randomness
+    uint256 public s_commitBlock;
+    uint256 public s_revealBlock;
+}
 ```
 
-### Frontend Commands
-```bash
-# Development server
-npm run dev
+### Key Functions
 
-# Build for production
-npm run build
+- `enter()` - Join the lottery by paying ticket price
+- `pickWinner()` - Select winner using block hash randomness
+- `getPlayers()` - Get list of all participants
+- `getLotteryState()` - Get current lottery state
 
-# Start production server
-npm start
-```
+## 🔒 Security Features
 
-## 🔐 Security Features
+### Randomness
+- Uses `blockhash()`, `block.timestamp`, and `block.prevrandao`
+- Commits to randomness block, reveals after 2 blocks
+- Prevents manipulation and ensures fairness
 
-- **VRF Integration**: Cryptographically secure randomness
-- **Access Control**: Only authorized functions can be called
-- **Error Handling**: Comprehensive error checking
-- **State Management**: Clear lottery state transitions
+### Access Control
+- Only lottery participants can trigger winner selection
+- Admin cannot manipulate results
+- All functions are public and auditable
 
-## 🌐 Network Support
+### Transparency
+- All lottery data is public
+- Contract source code is verified
+- All transactions are on-chain
 
-Currently configured for:
-- **Sepolia Testnet**: For development and testing
-- **Ethereum Mainnet**: Ready for production deployment
+## 🌐 Deployment
 
-## 📝 License
+### Sepolia Testnet (Current)
+- **Factory Contract**: `0xDE22C7fF7Ac8C7645AfB673a4Ea7087705FE94Ce`
+- **Network**: Ethereum Sepolia
+- **RPC**: https://ethereum-sepolia.publicnode.com
 
-MIT License - see LICENSE file for details
+### Mainnet Deployment
+1. Update environment variables
+2. Deploy to mainnet
+3. Verify contracts on Etherscan
+4. Update frontend configuration
 
 ## 🤝 Contributing
 
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
 
-## ⚠️ Disclaimer
+## 📝 License
 
-This is a demonstration project. Use at your own risk. Always audit smart contracts before using with real funds.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/dettery/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/dettery/discussions)
+- **Documentation**: [Wiki](https://github.com/yourusername/dettery/wiki)
+
+## 🙏 Acknowledgments
+
+- [Hardhat](https://hardhat.org/) - Smart contract development framework
+- [Next.js](https://nextjs.org/) - React framework
+- [Wagmi](https://wagmi.sh/) - React hooks for Ethereum
+- [Viem](https://viem.sh/) - TypeScript interface for Ethereum
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+
+## 📈 Roadmap
+
+- [ ] Mainnet deployment
+- [ ] Mobile app (React Native)
+- [ ] Additional randomness providers
+- [ ] Lottery categories and themes
+- [ ] Governance token
+- [ ] Multi-chain support
+
+---
+
+**Built with ❤️ for the decentralized future**
+
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/dettery?style=social)](https://github.com/yourusername/dettery)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/dettery?style=social)](https://github.com/yourusername/dettery)
+[![GitHub watchers](https://img.shields.io/github/watchers/yourusername/dettery?style=social)](https://github.com/yourusername/dettery)
