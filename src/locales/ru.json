@@ -62,8 +62,10 @@
       "waitingForRandomness": "Ожидание случайности",
       "waitingForRandomnessDescription": "Победитель может быть выбран после блока",
       "winnerSelected": "Победитель выбран!",
-      "congratulations": "Поздравляем! Вы выиграли!",
-      "latestFirst": "Последние лотереи показаны первыми"
+        "congratulations": "Поздравляем! Вы выиграли!",
+        "latestFirst": "Последние лотереи показаны первыми",
+        "activeLotteries": "Активные лотереи",
+        "paginationInfo": "Показаны последние 5 пулов с возможностью поиска и пагинации"
     },
     "validation": {
       "ticketPriceRequired": "Цена билета обязательна",
@@ -83,6 +85,23 @@
       "email": "Email",
       "sharedLottery": "Поделенная лотерея",
       "sharedLotteryDescription": "Эта лотерея была поделена с вами через прямую ссылку"
+    },
+    "search": {
+      "placeholder": "Поиск лотерейных пулов по адресу...",
+      "search": "Поиск",
+      "noResults": "Результаты не найдены",
+      "noResultsDescription": "Лотерейные пулы, соответствующие '{{query}}', не найдены. Попробуйте другой поисковый запрос.",
+      "clearSearch": "Очистить поиск",
+      "resultsInfo": "Найдено {{count}} результат(ов) для '{{query}}'",
+      "showingResults": "Показано {{showing}} из {{total}} результатов"
+    },
+    "pagination": {
+      "previous": "Предыдущая",
+      "next": "Следующая",
+      "loadMore": "Загрузить больше пулов",
+      "loading": "Загрузка...",
+      "pageInfo": "Страница {{current}} из {{total}}",
+      "showingPools": "Показано {{showing}} из {{total}} лотерейных пулов"
     }
   },
   "createLottery": {

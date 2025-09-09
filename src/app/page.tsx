@@ -145,8 +145,11 @@ export default function Home() {
         </div>
 
         <section>
-          <h2 className="mb-6 text-3xl font-bold text-gray-800">Active Lotteries</h2>
-          <p className="mb-6 text-gray-600 text-sm">{t('lottery.messages.latestFirst')}</p>
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">{t('lottery.messages.activeLotteries')}</h2>
+            <p className="text-gray-600 text-sm">{t('lottery.messages.latestFirst')}</p>
+            <p className="text-gray-500 text-xs mt-1">{t('lottery.messages.paginationInfo')}</p>
+          </div>
           <ErrorBoundary>
             <Suspense fallback={
               <div className="flex justify-center items-center py-12">

@@ -62,8 +62,10 @@
       "waitingForRandomness": "Waiting for Randomness",
       "waitingForRandomnessDescription": "Winner can be picked after block",
       "winnerSelected": "Winner Selected!",
-      "congratulations": "Congratulations! You won!",
-      "latestFirst": "Latest lotteries are shown first"
+        "congratulations": "Congratulations! You won!",
+        "latestFirst": "Latest lotteries are shown first",
+        "activeLotteries": "Active Lotteries",
+        "paginationInfo": "Showing latest 5 pools with search and pagination options"
     },
     "validation": {
       "ticketPriceRequired": "Ticket price is required",
@@ -83,6 +85,23 @@
       "email": "Email",
       "sharedLottery": "Shared Lottery",
       "sharedLotteryDescription": "This lottery was shared with you via a direct link"
+    },
+    "search": {
+      "placeholder": "Search lottery pools by address...",
+      "search": "Search",
+      "noResults": "No Results Found",
+      "noResultsDescription": "No lottery pools found matching '{{query}}'. Try a different search term.",
+      "clearSearch": "Clear Search",
+      "resultsInfo": "Found {{count}} result(s) for '{{query}}'",
+      "showingResults": "Showing {{showing}} of {{total}} results"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "loadMore": "Load More Pools",
+      "loading": "Loading...",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "showingPools": "Showing {{showing}} of {{total}} lottery pools"
     }
   },
   "createLottery": {
